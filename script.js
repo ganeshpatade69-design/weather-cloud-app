@@ -17,7 +17,7 @@ async function getWeather() {
                 <p>☁ Condition: ${data.weather[0].description}</p>
             `;
         } else {
-            document.getElementById("weatherResult").innerHTML = "City not found!";
+            document.getElementById("weatherResult").innerHTML = data.message;
         }
     } catch (error) {
         document.getElementById("weatherResult").innerHTML = "Error fetching data!";
